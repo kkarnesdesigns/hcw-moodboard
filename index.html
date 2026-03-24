@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H.C. Wainwright & Co. — Moodboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,opsz,wght@0,5..1200,400;0,5..1200,700;1,5..1200,400&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'Fraunces';
+  src: url('presentation/Fraunces-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('presentation/PPNeueMontreal-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('presentation/PPNeueMontreal-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('presentation/PPNeueMontreal-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('presentation/PPNeueMontreal-Thin.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #0E4D5E;
+  --navy-deep: #092F3A;
+  --navy-light: #1A6B80;
+  --gold: #C9A84C;
+  --gold-dark: #9E8438;
+  --gold-light: #D4BA6A;
+  --gold-muted: rgba(201, 168, 76, 0.15);
+  --cream: #F7F5F0;
+  --cream-dark: #E8E4DB;
+  --slate: #8EAAB4;
+  --charcoal: #2D3142;
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --white: #FFFFFF;
+  --border: rgba(0,0,0,0.08);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Neue Montreal', 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ── HEADER ── */
+header {
+  padding: 40px 60px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-left img { height: 48px; }
+
+.header-left .divider {
+  color: rgba(0,0,0,0.15);
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.header-left .studio-logo {
+  height: 22px;
+  opacity: 0.7;
+}
+
+.header-right { text-align: right; }
+
+.header-right .label {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+.header-right .date {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* ── BOARD ── */
+.board {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 48px 60px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ── SECTION LABEL ── */
+.section-label {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* ── IMAGE CARD ── */
+.card {
+  position: relative;
+  overflow: hidden;
+  background: var(--cream-dark);
+  border: 1px solid var(--border);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover img { transform: scale(1.03); }
+
+.card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(9,47,58,0.92) 0%, rgba(9,47,58,0.5) 60%, transparent 100%);
+}
+
+.card-caption .tag {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.card-caption .title {
+  font-family: 'Fraunces', 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  font-variation-settings: 'opsz' 72, 'SOFT' 0, 'WONK' 1;
+}
+
+.card-caption .desc {
+  font-size: 13px;
+  color: var(--cream-dark);
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+/* ── ROW LAYOUTS ── */
+.row-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3px;
+}
+.row-hero .card { min-height: 520px; }
+
+.row-triple {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+}
+.row-triple .card { min-height: 400px; }
+
+.row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+}
+.row-split .card { min-height: 440px; }
+
+.row-quad {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3px;
+}
+.row-quad .card { min-height: 320px; }
+
+/* ── CONCEPT NOTE ── */
+.concept-note {
+  padding: 44px 52px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  position: relative;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+}
+
+.concept-note::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gold);
+}
+
+.concept-note h3 {
+  font-family: 'Fraunces', 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-variation-settings: 'opsz' 72, 'SOFT' 0, 'WONK' 1;
+}
+
+.concept-note h3 em {
+  font-style: italic;
+  color: var(--gold-dark);
+}
+
+.concept-note p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 720px;
+}
+
+/* ── BRAND ASSETS ROW ── */
+.assets-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.asset-cell {
+  aspect-ratio: 3/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+.asset-cell img {
+  max-height: 60%;
+  max-width: 60%;
+  object-fit: contain;
+}
+
+.asset-cell .asset-tag {
+  position: absolute;
+  bottom: 14px;
+  left: 18px;
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+/* ── TICKER CONCEPT ── */
+.ticker-demo {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--navy-deep);
+  position: relative;
+  color: var(--cream);
+}
+
+.ticker-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.ticker-nav-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: 2px;
+}
+
+.ticker-nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.ticker-nav-links span {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--slate);
+  font-weight: 500;
+}
+
+.ticker-bar {
+  overflow: hidden;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(201,168,76,0.06);
+  background: rgba(201,168,76,0.02);
+}
+
+.ticker-scroll {
+  display: flex;
+  width: max-content;
+  animation: tickerMove 25s linear infinite;
+  gap: 36px;
+}
+
+.ticker-scroll span {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--slate);
+  white-space: nowrap;
+}
+
+.ticker-scroll .up { color: #4CAF50; }
+.ticker-scroll .down { color: #E57373; }
+
+@keyframes tickerMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.ticker-hero {
+  padding: 44px 32px 36px;
+  position: relative;
+}
+
+.ticker-hero::before {
+  content: '';
+  position: absolute;
+  right: 0; top: 0;
+  width: 40%; height: 100%;
+  background: radial-gradient(ellipse at right center, rgba(201,168,76,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ticker-hero-overline {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.ticker-hero h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--cream);
+  margin-bottom: 8px;
+  font-variation-settings: 'opsz' 72, 'SOFT' 0, 'WONK' 1;
+}
+
+.ticker-hero h3 em { font-style: italic; color: var(--gold); }
+
+.ticker-hero p {
+  font-size: 13px;
+  color: var(--cream-dark);
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.ticker-label {
+  position: absolute;
+  top: 12px; right: 16px;
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.3;
+}
+
+/* ══════════════════════════════════════
+   FONT OPTIONS
+   ══════════════════════════════════════ */
+
+.font-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+}
+
+.font-card {
+  padding: 48px 44px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.4s;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+}
+
+.font-card:hover { border-color: var(--gold); }
+
+.font-card .font-foundry {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 20px;
+}
+
+.font-card .font-specimen {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.font-card .font-specimen em { color: var(--gold-dark); }
+
+.font-card .font-name {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.font-card .font-meta {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.font-card .font-link {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 11px;
+  color: var(--gold-dark);
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 12px;
+  border-bottom: 1px solid rgba(201,168,76,0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.3s;
+}
+
+.font-card .font-link:hover { border-color: var(--gold-dark); }
+
+/* Font specimen image cards */
+.font-specimen-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--cream-dark);
+  border: 1px solid var(--border);
+}
+
+.font-specimen-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.font-specimen-card .font-specimen-label {
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  right: 20px;
+}
+
+.font-specimen-card .font-specimen-label .tag {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.font-specimen-card .font-specimen-label .title {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 2px;
+}
+
+/* Font pairing demos */
+.pairing-demo {
+  padding: 56px 52px;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+}
+
+.pairing-demo .pairing-label {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.pairing-demo .pairing-headline {
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  max-width: 640px;
+}
+
+.pairing-demo .pairing-body {
+  font-family: 'Neue Montreal', 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.pairing-demo .pairing-fonts {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 28px;
+  padding-top: 20px;
+}
+
+/* Dark pairing variant */
+.pairing-dark {
+  background: var(--navy-deep);
+  color: var(--cream);
+}
+
+.pairing-dark .pairing-label {
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.25);
+}
+
+.pairing-dark .pairing-headline { color: var(--cream); }
+.pairing-dark .pairing-headline em { color: var(--gold); }
+.pairing-dark .pairing-body { color: var(--cream-dark); }
+.pairing-dark .pairing-fonts { color: var(--slate); border-top: 1px solid rgba(255,255,255,0.06); }
+
+/* Light pairing variant */
+.pairing-light {
+  background: var(--white);
+}
+
+.pairing-light .pairing-label {
+  color: var(--gold-dark);
+  border: 1px solid rgba(201,168,76,0.25);
+}
+
+.pairing-light .pairing-headline { color: var(--navy); }
+.pairing-light .pairing-headline em { color: var(--gold-dark); }
+.pairing-light .pairing-body { color: var(--text-secondary); }
+.pairing-light .pairing-fonts { color: var(--slate); border-top: 1px solid var(--border); }
+
+/* Navy pairing variant */
+.pairing-navy {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.pairing-navy .pairing-label {
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.25);
+}
+
+.pairing-navy .pairing-headline { color: var(--cream); }
+.pairing-navy .pairing-headline em { color: var(--gold); }
+.pairing-navy .pairing-body { color: var(--cream-dark); }
+.pairing-navy .pairing-fonts { color: var(--slate); border-top: 1px solid rgba(255,255,255,0.06); }
+
+/* Font specimen gallery */
+.font-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+}
+
+.font-gallery .font-specimen-card { min-height: 340px; }
+
+/* Site inspiration grid */
+.site-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.site-card {
+  border: 1px solid var(--border);
+  background: var(--white);
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.site-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.site-img-wrap {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-img-wrap img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  max-height: 600px;
+}
+
+.site-meta {
+  padding: 16px 20px;
+}
+
+.site-meta .tag {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 2px;
+}
+
+.site-meta .title {
+  font-family: 'Fraunces', 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--navy);
+  font-variation-settings: 'opsz' 72, 'SOFT' 0, 'WONK' 1;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 36px 60px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer span {
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 11px;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  header, .board, footer { padding-left: 32px; padding-right: 32px; }
+  .row-hero, .row-triple, .row-split, .font-options-grid, .font-gallery { grid-template-columns: 1fr 1fr; }
+  .row-quad { grid-template-columns: 1fr 1fr; }
+  .assets-row { grid-template-columns: 1fr 1fr; }
+  .site-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: 16px; align-items: flex-start; }
+  header, .board, footer { padding-left: 20px; padding-right: 20px; }
+  .row-hero, .row-triple, .row-split, .row-quad, .assets-row, .font-options-grid, .font-gallery, .site-grid { grid-template-columns: 1fr; }
+  .row-hero .card, .row-triple .card, .row-split .card { min-height: 280px; }
+  .font-card .font-specimen { font-size: 36px; }
+  .pairing-demo .pairing-headline { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <div class="header-left">
+    <img src="HCW_Logo_Blue.png" alt="H.C. Wainwright & Co.">
+    <span class="divider">&times;</span>
+    <img class="studio-logo" src="https://cdn.prod.website-files.com/632947b18a18b29726649081/68d4044950f7f1520ece0f8f_Nine%20Yards_Logo_Updated.svg" alt="Nine Yards Studio">
+  </div>
+  <div class="header-right">
+    <div class="label">Design Moodboard</div>
+    <div class="date">March 2026</div>
+  </div>
+</header>
+
+<main class="board">
+
+  <!-- ═══ 1. THE LOUVRE ═══ -->
+  <section>
+    <div class="section-label">The Louvre &mdash; Modern Meets Classical</div>
+    <div class="row-hero">
+      <div class="card">
+        <img src="louvre.jpg" alt="Louvre Pyramid at night">
+        <div class="card-caption">
+          <div class="tag">Reference</div>
+          <div class="title">I.M. Pei's glass pyramid against the Louvre Palace</div>
+          <div class="desc">Modern geometry and classical stone. The exact tension we're designing for.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=900&q=85&fit=crop" alt="Louvre classical facade">
+        <div class="card-caption">
+          <div class="tag">Reference</div>
+          <div class="title">Classical authority, contemporary confidence</div>
+          <div class="desc">The old building doesn't compete with the pyramid — they elevate each other.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 2. ROTHSCHILD LONDON OFFICE ═══ -->
+  <section>
+    <div class="section-label">Rothschild Interior &mdash; New Court, London</div>
+    <div class="row-triple">
+      <div class="card">
+        <img src="https://cdn.sanity.io/images/5azy6oei/production/d3dfdf1e3db370f457f09ac6d839183ecac448af-5616x3744.jpg?w=1200" alt="Rothschild New Court interior">
+        <div class="card-caption">
+          <div class="tag">Rothschild</div>
+          <div class="title">New Court &mdash; St Swithin's Lane</div>
+          <div class="desc">OMA's design for Rothschild's London HQ. A contemporary palazzo with historic collections woven throughout.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn.sanity.io/images/5azy6oei/production/06e5b3bdde05d8867eceb1e9c7d65b20a04e2a2d-5616x3744.jpg?w=1200" alt="Rothschild New Court lobby">
+        <div class="card-caption">
+          <div class="tag">Rothschild</div>
+          <div class="title">The Glass Lobby</div>
+          <div class="desc">Tall glass lobby opening a visual passage to St. Stephen Walbrook. Modern transparency against centuries of heritage.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn.sanity.io/images/5azy6oei/production/2e0366dea4d96e352500faa2433587e847312cea-5616x3744.jpg?w=1200" alt="Rothschild New Court detail">
+        <div class="card-caption">
+          <div class="tag">Rothschild</div>
+          <div class="title">Oak Archive &amp; Client Rooms</div>
+          <div class="desc">Oak-panelled archive, client meeting rooms with historic Rothschild objects. Institutional gravitas at every turn.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONCEPT NOTE ═══ -->
+  <div class="concept-note">
+    <h3>Classic touches accenting a <em>modern</em> design</h3>
+    <p>We're not building a museum. We're building a digital presence that carries the same institutional weight as a Rothschild drawing room — but moves with the speed and clarity of a modern interface.</p>
+  </div>
+
+  <!-- ═══ 3. WIDDER HOTEL ZURICH ═══ -->
+  <section>
+    <div class="section-label">Widder Hotel Zurich &mdash; Medieval Walls, Modern Soul</div>
+    <div class="row-split">
+      <div class="card">
+        <img src="https://static.prod.r53.tablethotels.com/media/hotels/slideshow_images_staged/large/1095894.jpg" alt="Widder Hotel interior">
+        <div class="card-caption">
+          <div class="tag">Widder Hotel</div>
+          <div class="title">Medieval stone, modern masters</div>
+          <div class="desc">Nine townhouses, 700 years of history. Le Corbusier chairs against 13th-century stone. Warhol beside ancient frescoes.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://static.prod.r53.tablethotels.com/media/hotels/slideshow_images_staged/large/1095896.jpg" alt="Widder Hotel room">
+        <div class="card-caption">
+          <div class="tag">Widder Hotel</div>
+          <div class="title">No two rooms alike</div>
+          <div class="desc">Painted beams, ornate intarsia, antique stoves — each room its own chapter. Chrome and glass weave the centuries together.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 4. POINTILLISM ═══ -->
+  <section>
+    <div class="section-label">Pointillism &mdash; Data Made Beautiful</div>
+    <div class="row-triple">
+      <div class="card">
+        <img src="https://cdn.mos.cms.futurecdn.net/75e48c14a737d6f2c118b2419963a4d8.jpg" alt="Pointillism portrait by Miguel Endara">
+        <div class="card-caption">
+          <div class="tag">Pointillism</div>
+          <div class="title">Miguel Endara &mdash; 3.2 million dots</div>
+          <div class="desc">Up close: data. Step back: clarity.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn.mos.cms.futurecdn.net/77ED3dEFHDRRXcuNmfAvgM.jpg" alt="Pablo Jurado Ruiz pointillism">
+        <div class="card-caption">
+          <div class="tag">Pointillism</div>
+          <div class="title">Pablo Jurado Ruiz</div>
+          <div class="desc">Applied to stock imagery, this becomes HCW's signature visual language.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn.mos.cms.futurecdn.net/EnrtwQ8WtitDU66wUrGubK.jpg" alt="Georges Seurat">
+        <div class="card-caption">
+          <div class="tag">Origin</div>
+          <div class="title">Georges Seurat &mdash; The original</div>
+          <div class="desc">Millions of dots composing an image — like data points composing market insight.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 5. STATE STREET BUILDING ═══ -->
+  <section>
+    <div class="section-label">Boston State Street Building &mdash; Retained Heritage</div>
+    <div class="assets-row">
+      <div class="asset-cell" style="background: var(--navy-deep);">
+        <img src="StateStreetBldg_new4.jpg" alt="Old State Street Building">
+        <span class="asset-tag" style="color: var(--slate);">State Street Building</span>
+      </div>
+      <div class="asset-cell" style="background: var(--navy);">
+        <img src="images (5).jpeg" alt="Heraldic Lion" style="opacity: 0.7;">
+        <span class="asset-tag" style="color: var(--slate);">Heraldic Lion</span>
+      </div>
+      <div class="asset-cell" style="background: var(--white);">
+        <img src="HCW_Logo_Blue.png" alt="HCW Logo">
+        <span class="asset-tag" style="color: var(--navy);">Logo &mdash; Primary</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="concept-note">
+    <h3>The building <em>stays</em></h3>
+    <p>The Old State Street engraving, the heraldic lion, the crossed oars — these are kept and elevated. They become textural elements woven into the modern design: ghosted in backgrounds, embossed in section dividers, etched into hover states.</p>
+  </div>
+
+  <!-- ═══ 7. CLIENT INSPIRATION ═══ -->
+  <section>
+    <div class="section-label">Client Inspiration &mdash; Collected References</div>
+    <div class="row-quad">
+      <div class="card">
+        <img src="Design Inspiration/0b0f22900bbd8df46e43c51fcfd90746.webp" alt="Neo-classical Visions">
+        <div class="card-caption">
+          <div class="tag">Typography</div>
+          <div class="title">Neo-Classical Visions</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="Design Inspiration/original-e5dec3f0c2ee8313b8582edd8d998624.webp" alt="Antique Library">
+        <div class="card-caption">
+          <div class="tag">Atmosphere</div>
+          <div class="title">Library of Antiquity</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="Design Inspiration/original-21337f815a572e0d768c594b63bcbd4e.webp" alt="Artempo Gallery">
+        <div class="card-caption">
+          <div class="tag">Layout</div>
+          <div class="title">Artempo &mdash; Dark/Cream Split</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="Design Inspiration/711bc8731c3d55e178656c5a130741ec.webp" alt="Klimt Gallery">
+        <div class="card-caption">
+          <div class="tag">Editorial</div>
+          <div class="title">Mixed Serif &amp; Sans Typography</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SITE INSPIRATION ═══ -->
+  <section>
+    <div class="section-label">Site Inspiration</div>
+    <div class="site-grid">
+      <a class="site-card" href="https://www.giampierobodino.com/en/" target="_blank" rel="noopener">
+        <div class="site-img-wrap">
+          <img src="site_giampiero.jpg" alt="Giampiero Bodino website">
+        </div>
+        <div class="site-meta">
+          <div class="tag">giampierobodino.com</div>
+          <div class="title">Giampiero Bodino</div>
+        </div>
+      </a>
+      <a class="site-card" href="https://www.widderhotel.com/en/" target="_blank" rel="noopener">
+        <div class="site-img-wrap">
+          <img src="site_widder.jpg" alt="Widder Hotel website">
+        </div>
+        <div class="site-meta">
+          <div class="tag">widderhotel.com</div>
+          <div class="title">Widder Hotel Zurich</div>
+        </div>
+      </a>
+      <a class="site-card" href="https://www.coutts.com/why-coutts/history.html" target="_blank" rel="noopener">
+        <div class="site-img-wrap">
+          <img src="site_coutts.jpg" alt="Coutts website">
+        </div>
+        <div class="site-meta">
+          <div class="tag">coutts.com</div>
+          <div class="title">Coutts &mdash; History</div>
+        </div>
+      </a>
+      <a class="site-card" href="https://www.glenmede.com/private-wealth-management/" target="_blank" rel="noopener">
+        <div class="site-img-wrap">
+          <img src="site_glenmede.jpg" alt="Glenmede website">
+        </div>
+        <div class="site-meta">
+          <div class="tag">glenmede.com</div>
+          <div class="title">Glenmede</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       FONT INSPIRATION
+       ══════════════════════════════════════════════════ -->
+
+  <div style="width: 100%; height: 1px; background: var(--border); margin: 20px 0 0;"></div>
+
+  <section>
+    <div class="section-label">Font Inspiration</div>
+    <div class="font-gallery">
+      <div class="font-specimen-card">
+        <img src="https://pangrampangram.com/cdn/shop/files/Cover_images_-_Editorial_New2.jpg?format=pjpg&v=1746450403&width=1200" alt="Editorial New specimen">
+      </div>
+      <div class="font-specimen-card">
+        <img src="https://pangrampangram.com/cdn/shop/files/Cover_images_-_Migra_29892d77-83c0-4377-9742-dab849670597.jpg?format=pjpg&v=1746453850&width=1200" alt="Migra specimen">
+      </div>
+      <div class="font-specimen-card">
+        <img src="https://pangrampangram.com/cdn/shop/files/Cover_images_-_Neue_Montreal.jpg?format=pjpg&v=1746560247&width=1200" alt="Neue Montreal specimen">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>H.C. Wainwright & Co. &middot; Design Direction</span>
+  <span>Prepared by Nine Yards Studio</span>
+</footer>
+
+</body>
+</html>
